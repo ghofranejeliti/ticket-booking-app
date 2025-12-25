@@ -2,12 +2,13 @@ import time
 import json
 import os
 import psycopg2
+from flask_cors import CORS
 from flask import Flask, request, jsonify
 from kafka import KafkaProducer
 from kafka.errors import NoBrokersAvailable
 
 app = Flask(__name__)
-
+CORS(app)
 TICKET_KAFKA_TOPIC = 'ticket_details'
 TICKET_LIMIT = 72
 

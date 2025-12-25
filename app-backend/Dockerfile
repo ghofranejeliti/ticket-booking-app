@@ -5,7 +5,7 @@ WORKDIR /app
 COPY . .
 
 # Install dependencies
-RUN pip install --no-cache-dir flask kafka-python requests psycopg2-binary
+RUN pip install --no-cache-dir flask flask-cors kafka-python requests psycopg2-binary
 
 # Expose Flask port
 EXPOSE 5000
